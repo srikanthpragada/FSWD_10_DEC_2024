@@ -11,9 +11,10 @@
             var marks = data.split(",")
             //console.log(marks)
             let total = 0
-            for (let m of marks)
-                total += parseInt(m)
-
+            for (let m of marks) {
+                if (/\d+/.test(m))  // only when m contains digits 
+                   total += parseInt(m)
+            }
             alert(total)
         }
     </script>

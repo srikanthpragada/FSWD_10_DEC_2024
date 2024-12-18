@@ -8,4 +8,9 @@ function countWords(st) {
     return words + 1;
 }
 
-console.log(countWords('This is to test'))
+function countWords2(st) {
+     return st.split(/\W+/).length
+}
+
+console.log(countWords('This is to   test'))
+console.log(countWords2('This is    to     test'))
