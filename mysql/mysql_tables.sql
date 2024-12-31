@@ -38,6 +38,12 @@ insert into employees(fullname,dept_id,salary) values('Json Hunter','ac',null);
 
 =============================
 
+select * from employees
+order by salary desc
+limit 3
+
+
+
 update employees set salary = salary * 1.1 where dept_id = 'sa'
 
 select * 
@@ -55,6 +61,15 @@ where fullname like '_t%'
 select *
 from employees
 where fullname like '%t%'
+
+select * from employees
+where fullname like '_a%'
+
+select * from employees
+where salary is not null
+order by salary
+
+
 
 select  fullname, dept_name
 from employees join departments 
