@@ -1,6 +1,6 @@
 
 var mm = require('./math_funs')  // importing
-// Object destructring
+// Object destructuring
 var {isEven} = require('./math_funs')
 
 console.log(mm)
