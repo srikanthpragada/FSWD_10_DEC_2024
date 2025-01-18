@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Hello from './basics/Hello';
-import Today from './basics/Today';
+import MessagePV from './props/MessagePV';
 //import reportWebVitals from './reportWebVitals';
+
+let catalog = [
+   { title: 'iPhone 15 pro', price: 80000, disrate : 10 }, 
+   { title: 'PowerBeats Pro', price: 30000, disrate : 15 },
+   { title: 'Bose Headphones', price: 40000, disrate : 25 }
+]
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Hello />
-    <hr/>
-    <Today />
+    <MessagePV message="You are as good as your most recent performance!"
+               size="50px" />
   </React.StrictMode>
 );
 
