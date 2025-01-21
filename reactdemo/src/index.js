@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MessagePV from './props/MessagePV';
+import ProductsList from './props/ProductsList';
 //import reportWebVitals from './reportWebVitals';
 
 let catalog = [
@@ -13,8 +13,7 @@ let catalog = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MessagePV message="You are as good as your most recent performance!"
-               size="50px" />
+    <ProductsList catalog={catalog} />
   </React.StrictMode>
 );
 
