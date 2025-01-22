@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ProductsList from './props/ProductsList';
+import TechSkills2 from './state/TechSkills2';
 //import reportWebVitals from './reportWebVitals';
 
 let catalog = [
@@ -13,7 +13,7 @@ let catalog = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProductsList catalog={catalog} />
+     <TechSkills2 />
   </React.StrictMode>
 );
 
