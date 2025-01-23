@@ -6,6 +6,10 @@ import AddNewSkill from './AddNewSkill';
 function ShowSkills({ skills, deleteSkill }) {
    
     function deleteCurrentSkill(skill) {
+        // take confirmation about deleting the skill
+        if (!window.confirm(`Do you want to delete [${skill}] skill?`)) {
+            return;
+        }
         deleteSkill(skill);
     }
 
