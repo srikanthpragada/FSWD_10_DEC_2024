@@ -49,6 +49,10 @@ async function searchBooks(req, res) {
 
 async function addBook(req, res) {
   try {
+    if (!validateBook(req.body)) {
+      res.status(400).send("Invalid Book Data!")
+      return
+    }
     await db.addBook(req.body)
     res.status(201).send("Book Added!")
   }
@@ -59,6 +63,12 @@ async function addBook(req, res) {
 
 async function updateBook(req, res) {
   try {
+
+    if (!validateBook(req.body)) {
+      res.status(400).send("Invalid Book Data!")
+      return
+    }
+    
     updated = await db.updateBook(req.params.id, req.body)
     if (updated)
       res.status(200).send("Book Updated!")
@@ -91,6 +101,12 @@ async function getAuthorsBooksCount(req, res) {
   catch (err) {
     res.status(500).send("Error : " + err.message)
   }
+}
+
+function validateBook(book) {
+  if (!book.title || !book.author || !book.price)
+    return false
+  return true
 }
 
 
